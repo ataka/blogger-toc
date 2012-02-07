@@ -1,7 +1,7 @@
 var d = document;
+var toc = d.getElementById('toc');
 var titles = d.getElementsByClassName('entry-title');
 var max = titles.length;
-var toc = d.getElementById('toc');
 if (max <= 1){
   toc.parentNode.parentNode.setAttribute('style', 'display:none;');
 } else {
@@ -17,4 +17,7 @@ if (max <= 1){
     a.setAttribute('href', url.getAttribute('href'));
     toc.appendChild(a);
   }
+  // Add Blog Pager
+  var blog_pager = d.getElementById('blog-pager');
+  toc.parentNode.appendChild(blog_pager.cloneNode(true));
 }
