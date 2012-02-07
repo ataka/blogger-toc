@@ -4,8 +4,10 @@ var max = titles.length;
 var toc = d.getElementById('toc');
 for (i=0; i<max; i++){
   var a = d.createElement('a');
-  a.innerText = titles[i].innerText;
-  a.setAttribute('href', titles[i].childNodes[1].getAttribute('href'));
+  var post_title = titles[i];
+  var url = post_title.getElementsByTagName('a')[0];
+  a.innerText = post_title.innerText;
+  a.setAttribute('href', url.getAttribute('href'));
   var li = d.createElement('li');
   toc.appendChild(li.appendChild(a));
 }
