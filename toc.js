@@ -13,7 +13,7 @@ if (max <= 1){
     // Add Post Title
     var post_title = titles[i];
     var url = post_title.getElementsByTagName('a')[0];
-    a.textContent = post_title.textContent;
+    a.innerHTML = post_title.innerHTML;
     a.setAttribute('href', url.getAttribute('href'));
     toc.appendChild(a);
   }
